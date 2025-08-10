@@ -1,5 +1,5 @@
 output "report_bucket" {
-  value = aws_s3_bucket.reports.bucket
+  value = aws_s3_bucket.reports_generated.bucket
 }
 
 output "lambda_function_name" {
