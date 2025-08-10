@@ -81,7 +81,7 @@ resource "aws_lambda_function" "public_exposure_check" {
 
   environment {
     variables = {
-      BUCKET_NAME = aws_s3_bucket.reports_generated.bucket
+      REPORT_BUCKET = aws_s3_bucket.reports_generated.bucket
       SNS_TOPIC   = aws_sns_topic.findings.arn
     }
   }
