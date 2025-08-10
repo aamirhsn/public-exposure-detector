@@ -1,0 +1,1 @@
+Compress-Archive -Path lambda_function.py -DestinationPath lambda.zip -Force

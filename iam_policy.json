@@ -1,0 +1,68 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CloudWatchLogs",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:*:*:*"
+    },
+    {
+      "Sid": "S3ReportBucket",
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:PutObjectAcl",
+        "s3:ListBucket",
+        "s3:GetBucketLocation",
+        "s3:ListAllMyBuckets",
+        "s3:GetObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::*"
+      ]
+    },
+    {
+      "Sid": "EC2IPAMNetwork",
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeInstances",
+        "ec2:DescribeNetworkInterfaces",
+        "ec2:DescribeSecurityGroups",
+        "ec2:DescribeAddresses",
+        "ec2:DescribeInternetGateways",
+        "ec2:DescribeVpcs",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeNetworkInsightsAccessScopes",
+        "ec2:CreateNetworkInsightsPath",
+        "ec2:StartNetworkInsightsAnalysis",
+        "ec2:DescribeNetworkInsightsAnalyses",
+        "ec2:DeleteNetworkInsightsPath",
+        "ec2:DescribeIpamResourceDiscoveries",
+        "ec2:GetIpamDiscoveredPublicAddresses",
+        "ec2:GetIpamPoolCidrs",
+        "ec2:DescribePublicIpv4Pools"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "OtherServicesRead",
+      "Effect": "Allow",
+      "Action": [
+        "elbv2:DescribeLoadBalancers",
+        "rds:DescribeDBInstances",
+        "cloudfront:ListDistributions",
+        "apigateway:GET",
+        "apigateway:GET*",
+        "apigateway:GET /restapis",
+        "apigatewayv2:GetApis",
+        "sns:Publish"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
