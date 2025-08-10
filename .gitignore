@@ -1,0 +1,19 @@
+# Terraform local state & cache
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Zip artifacts
+lambda.zip
+
+# Local environment
+.env
